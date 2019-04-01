@@ -1,0 +1,19 @@
+from sklearn import tree
+
+
+features = [[100],[150],[161],[98],[250],[290],[20],[134],[500],[320],[45]]
+
+labels = ["A day", "A day and a half", "Two days", "A day","Three days","Three days","Half a day","A day","Three days","Three days","Half a day"]
+
+clf = tree.DecisionTreeClassifier()
+
+clf = clf.fit(features, labels)
+
+while 1: 
+
+    distanta=input('Please give the distance in km:')
+    if distanta == '0':
+        break
+    print(clf.predict([[distanta]]))
+
+print('Thanks for using our app! :)')
